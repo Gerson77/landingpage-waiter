@@ -69,7 +69,7 @@ strong {
 }
 
 header {
-  background: var(--dark-bg);
+  background: var(--dark-full);
   padding: var(--spacing-large) 0;
   box-shadow: var(--box-shadow-light);
 }
