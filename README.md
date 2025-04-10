@@ -29,6 +29,8 @@ Este projeto está sob a licença MIT . Veja o arquivo LICENSE para mais detalhe
 📧 **Contato**
 Se tiver dúvidas ou sugestões, entre em contato:
 
-- LinkedIn : [linkedin.com/in/seu-perfil](https://www.linkedin.com/in/gerson-santos-silva/)
+- LinkedIn : [linkedin.com/in/gerson-santos-silva](https://www.linkedin.com/in/gerson-santos-silva/)
+
+## Ver projeto
 
 <a href="https://landingpage-waiter.vercel.app/" target="_blank">Click para conferir o projeto</a>
