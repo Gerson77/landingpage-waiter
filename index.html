@@ -1,308 +1,666 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestão de Pedidos - Solução para Restaurantes</title>
-    <link rel="shortcut icon" href="./assets/favicon.ico" />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Link do Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
-    />
-  </head>
-  <body>
-    <!-- Cabeçalho -->
-    <header>
-      <div class="container menu">
-        <div class="title-header">
-          <img src="./assets/Logo.png" alt="" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WaiterApp — Gestão de Pedidos Inteligente para Restaurantes</title>
+  <meta name="description" content="Elimine erros de pedidos, agilize o atendimento e aumente o faturamento do seu restaurante com o WaiterApp. Teste grátis por 14 dias.">
+  <link rel="shortcut icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts: Outfit (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css">
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo">
+        <img src="./assets/Logo.png" alt="WaiterApp" width="150" height="40" loading="eager">
+      </a>
+
+      <nav id="primary-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#solucao">Como Funciona</a></li>
+          <li><a href="#funcionalidades">Funcionalidades</a></li>
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#precos">Preços</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#precos" class="btn btn-sm btn-ghost">Entrar</a>
+        <a href="#precos" class="btn btn-sm btn-primary">Testar Grátis</a>
+      </div>
+
+      <button class="hamb-btn" id="hamb-btn" aria-label="Abrir menu" aria-expanded="false">
+        <i class="ph ph-list" id="hamb-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <a href="#solucao" class="mob-link">Como Funciona</a>
+      <a href="#funcionalidades" class="mob-link">Funcionalidades</a>
+      <a href="#beneficios" class="mob-link">Benefícios</a>
+      <a href="#depoimentos" class="mob-link">Depoimentos</a>
+      <a href="#precos" class="mob-link">Preços</a>
+      <a href="#precos" class="btn btn-primary btn-block">Começar Teste Grátis</a>
+    </div>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-bg-glow hero-glow--1"></div>
+    <div class="hero-bg-glow hero-glow--2"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="hero-badge">
+          <i class="ph-fill ph-sparkle"></i>
+          <span>Plataforma #1 em gestão de pedidos</span>
         </div>
-        <nav>
-          <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#solucao">Apresentação</a></li>
-            <li><a href="#funcionalidades">Funcionalidades</a></li>
-            <li><a href="#beneficios">Benefícios</a></li>
-            <li><a href="#precos">Preços</a></li>
-          </ul>
-        </nav>
-        <div class="menu-hamb">
-          <i class="ph ph-list"></i>
+
+        <h1 class="hero-title">
+          Elimine erros de pedidos e <span class="text-gradient">lucre mais</span> no seu restaurante
+        </h1>
+
+        <p class="hero-subtitle">
+          Centralize pedidos do salão, delivery e balcão em uma única tela.
+          Reduza em até <strong>90% os erros</strong> e aumente o faturamento
+          com atendimentos mais rápidos e precisos.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#precos" class="btn btn-primary btn-lg">
+            <span>Comece Grátis por 14 Dias</span>
+            <i class="ph-bold ph-arrow-right"></i>
+          </a>
+          <a href="#solucao" class="btn btn-ghost btn-lg">
+            <i class="ph ph-play-circle" style="font-size:22px"></i>
+            <span>Ver Demonstração</span>
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-avatars">
+            <div class="avatar-stack">
+              <span class="avatar">R</span>
+              <span class="avatar">M</span>
+              <span class="avatar">S</span>
+              <span class="avatar">A</span>
+            </div>
+            <div class="trust-stars">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+            </div>
+          </div>
+          <p class="trust-text">
+            <strong>500+ restaurantes</strong> já transformaram sua operação
+          </p>
         </div>
       </div>
 
-    </header>
-
-    <!-- Seção Hero -->
-    <div class="bg-hero">
-      <section id="inicio" class="hero container">
-        <div class="content-hero">
-          <h1>
-            Gerencie seus <strong>pedidos com eficiência</strong> e facilidade!
-          </h1>
-          <p>
-            Uma solução intuitiva e em tempo real para restaurantes que desejam
-            otimizar suas operações.
-          </p>
-          <div>
-            <a href="#precos" class="btn-primary">Experimente Agora</a>
-            <a href="#funcionalidades" class="btn-secondary">Saiba Mais</a>
-          </div>
+      <div class="hero-visual">
+        <div class="hero-visual-glow"></div>
+        <img src="./assets/Devices.png" alt="WaiterApp rodando em tablet e celular — painel de pedidos em tempo real"
+             class="hero-img" loading="eager">
+        <div class="hero-float-card hero-float-card--1">
+          <i class="ph-fill ph-check-circle"></i>
+          <span>Pedido #247 enviado à cozinha</span>
         </div>
-        <img src="./assets/Devices.png" alt="" />
-      </section>
+        <div class="hero-float-card hero-float-card--2">
+          <i class="ph-fill ph-trend-up"></i>
+          <span>Vendas +32% este mês</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Problema/Solução -->
-    <section class="problem-solution">
-      <div class="problem container">
-        <h2>Os desafios dos restaurantes na gestão de pedidos</h2>
-        <p>
-          O gerenciamento de pedidos em restaurantes pode ser
-          <strong>caótico: </strong> erros manuais, falta de comunicação e
-          dificuldades em acompanhar os pedidos em tempo real.
-        </p>
+    <!-- Barra de logos social proof -->
+    <div class="social-bar">
+      <div class="container">
+        <p class="social-bar-label">Usado por restaurantes em todo o Brasil</p>
+        <div class="social-bar-logos">
+          <div class="logo-placeholder"><i class="ph ph-hamburger"></i> Burger House</div>
+          <div class="logo-placeholder"><i class="ph ph-bowl-food"></i> Sabor Express</div>
+          <div class="logo-placeholder"><i class="ph ph-pizza"></i> Pizza Point</div>
+          <div class="logo-placeholder"><i class="ph ph-coffee"></i> Café Central</div>
+          <div class="logo-placeholder"><i class="ph ph-cake"></i> Doce Vida</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROBLEMA / DORES ===================== -->
+  <section class="problem-section">
+    <div class="container problem-inner">
+      <div class="problem-badge">
+        <i class="ph-fill ph-warning"></i>
+        Você reconhece essa situação?
+      </div>
+      <h2 class="problem-title">
+        A gestão manual de pedidos está <span class="text-gradient">destruindo</span>
+        o lucro do seu restaurante
+      </h2>
+      <p class="problem-subtitle">
+        Todo minuto desperdiçado com processos manuais é dinheiro que fica na mesa.
+        Restaurantes que não digitalizam sua operação perdem clientes e faturamento todos os dias.
+      </p>
+
+      <div class="problem-grid" data-stagger>
+        <div class="problem-card">
+          <div class="problem-icon problem-icon--red">
+            <i class="ph-bold ph-x-circle"></i>
+          </div>
+          <h3>Pedidos errados ou perdidos</h3>
+          <p>Anotações em papel geram confusão, erros na cozinha e clientes insatisfeitos que não voltam.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon problem-icon--red">
+            <i class="ph-bold ph-clock"></i>
+          </div>
+          <h3>Atendimento lento</h3>
+          <p>Demora para comunicar a cozinha, mesas esperando e rodízio de clientes prejudicado.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon problem-icon--red">
+            <i class="ph-bold ph-chart-bar"></i>
+          </div>
+          <h3>Sem dados para decidir</h3>
+          <p>Sem relatórios, você não sabe quais pratos vendem mais, horários de pico ou seu faturamento real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOLUÇÃO / COMO FUNCIONA ===================== -->
+  <section id="solucao" class="solution-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="ph-fill ph-check-fat"></i>
+          <span>Simples e rápido</span>
+        </div>
+        <h2>Comece a operar com o WaiterApp em <span class="text-gradient">3 passos</span></h2>
+        <p>Sem instalação complexa, sem treinamento demorado. Seu restaurante funcionando em minutos.</p>
       </div>
 
-      <div id="solucao" class="solution container">
-        <div class="content-subtitle">
-          <h2>Nossa solução</h2>
-          <p>
-            Nosso app resolve esses problemas oferecendo uma plataforma
-            unificada e fácil de usar, disponível tanto no desktop quanto no
-            mobile.
-          </p>
-        </div>
-        <div class="device-image">
-          <div class="content-text">
-            <h2>Uma Interface <strong>Intuitiva</strong> e Moderna</h2>
-            <p>
-              Nosso app foi projetado pensando na experiência do usuário. Com
-              uma interface limpa, moderna e fácil de usar, você pode gerenciar
-              seu restaurante sem complicações.
-            </p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <i class="ph-bold ph-user-circle-plus"></i>
           </div>
-          <img class="image-1" src="./assets/celulares.png" alt="" />
+          <h3>Crie sua conta</h3>
+          <p>Cadastro rápido, sem cartão de crédito. Configure seu cardápio em poucos minutos.</p>
         </div>
 
-        <div class="device-video">
-          <div class="layers">
-            <div class="video-left">
-              <div class="column-image hidden">
-                <div
-                  style="
-                    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
-                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                    transform-style: preserve-3d;
-                  "
-                  class="video-left"
-                >
-                  <img
-                    src="https://cdn.prod.website-files.com/63d0f8b43ca85422d48a69d6/63d81b4b706f9e5ef2013ca1_iPhone%2014%20Pro.png"
-                    loading="eager"
-                    alt=""
-                    class="image-2"
-                  />
-                  <div class="video-frame">
-                    <div class="video w-embed">
-                      <div id="videoBackground">
-                        <video
-                          class="video-play"
-                          preload="auto"
-                          playsinline=""
-                          autoplay=""
-                          loop=""
-                          muted=""
-                        >
-                          <source src="./assets/login.mov" type="video/mp4" />
-                        </video>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="step-connector"></div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <i class="ph-bold ph-device-mobile"></i>
+          </div>
+          <h3>Conecte sua equipe</h3>
+          <p>Garçons, cozinha e gerência todos na mesma plataforma, em tempo real.</p>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <i class="ph-bold ph-rocket-launch"></i>
+          </div>
+          <h3>Receba e gerencie pedidos</h3>
+          <p>Atenda mais mesas em menos tempo com zero erros de comunicação.</p>
+        </div>
+      </div>
+
+      <div class="solution-cta-wrap">
+        <a href="#precos" class="btn btn-primary">
+          <span>Criar Minha Conta Grátis</span>
+          <i class="ph-bold ph-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HERO APP (device showcase) ===================== -->
+  <section class="showcase-section">
+    <div class="container showcase-grid">
+      <div class="showcase-visual">
+        <div class="layers">
+          <div class="phone-mockup">
+            <div class="column-image">
+              <img
+                src="./assets/xiaomi-12-2022-medium.png"
+                alt="App WaiterApp em iPhone"
+                class="phone-frame"
+                loading="lazy"
+              >
+              <div class="phone-video-frame">
+                <video class="phone-video" preload="auto" playsinline autoplay loop muted>
+                  <source src="./assets/login.mov" type="video/mp4">
+                </video>
               </div>
             </div>
-            <div
-              style="
-                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(172deg) skew(0deg, 0deg);
-                opacity: 1;
-                transform-style: preserve-3d;
-              "
-              class="first-layer"
-            ></div>
-            <div
-              style="
-                transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
-                  rotateX(0deg) rotateY(0deg) rotateZ(165deg) skew(0deg, 0deg);
-                opacity: 1;
-                transform-style: preserve-3d;
-              "
-              class="second-layer"
-            ></div>
-          </div>
-          <div class="content-text">
-            <h2>Transforme <strong>Sua Gestão</strong> com o Nosso App</h2>
-            <p>
-              Nosso app simplifica a gestão do seu restaurante com
-              funcionalidades essenciais:
-            </p>
-            <ul class="features-list">
-              <li>Acesse sua conta de forma rápida e segura.</li>
-              <li>Cadastre e gerencie pedidos em poucos cliques.</li>
-              <li>Monitore o status de cada pedido diretamente no app.</li>
-            </ul>
+            <div class="phone-layer--1"></div>
+            <div class="phone-layer--2"></div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Funcionalidades -->
-    <section id="funcionalidades" class="features">
-      <div class="container">
-        <h2>Principais funcionalidades do nosso app</h2>
-        <div class="feature-list">
-          <div class="feature-item">
-            <div class="icon">
-              <i class="ph ph-speedometer"></i>
-            </div>
-            <h3>Gestão em Tempo Real</h3>
-            <p>Acompanhe todos os pedidos à medida que são feitos.</p>
-          </div>
-          <div class="feature-item">
-            <div class="icon">
-              <i class="ph ph-layout"></i>
-            </div>
-            <h3>Interface Intuitiva</h3>
-            <p>
-              Design limpo e fácil de usar, tanto no desktop quanto no mobile.
-            </p>
-          </div>
-          <div class="feature-item">
-            <div class="icon">
-              <i class="ph ph-browsers"></i>
-            </div>
-            <h3>Integração Multicanal</h3>
-            <p>
-              Receba pedidos de diferentes plataformas (delivery, balcão, mesa).
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      <div class="showcase-copy">
+        <h2>Tudo na palma da sua mão, <span class="text-gradient">em tempo real</span></h2>
+        <p>Acompanhe cada pedido, do momento que é lançado até a entrega na mesa. Sem surpresas, sem erros.</p>
 
-    <!-- Benefícios -->
-    <section id="beneficios" class="benefits">
-      <div class="container">
-        <h2>Por que escolher nossa solução?</h2>
-        <div class="benefit-list">
-          <div class="benefit-item">
-            <div class="icon">
-              <i class="ph ph-gauge"></i>
-            </div>
-            <h3>Aumento da Eficiência</h3>
-            <p>Reduza erros e acelere o processo de atendimento.</p>
-          </div>
-          <div class="benefit-item">
-            <div class="icon">
-              <i class="ph ph-users"></i>
-            </div>
-            <h3>Melhoria na Experiência do Cliente</h3>
-            <p>Ofereça um serviço mais rápido e preciso.</p>
-          </div>
-          <div class="benefit-item">
-            <div class="icon">
-              <i class="ph ph-calculator"></i>
-            </div>
-            <h3>Redução de Custos</h3>
-            <p>Economize tempo e recursos com automação.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Planos e Preços -->
-    <section id="precos" class="pricing">
-      <div class="container">
-        <h2>Escolha o plano ideal para o seu restaurante</h2>
-        <div class="pricing-plans">
-          <div class="plan basic">
-            <h3>Básico</h3>
+        <ul class="showcase-features">
+          <li>
+            <i class="ph-fill ph-shield-check"></i>
             <div>
-              <p>Funcionalidades essenciais</p>
-              <p>Até 5 usuários</p>
-              <p>Relatórios básicos</p>
-              <h2 class="price">$199/mês</h2>
+              <strong>Login seguro</strong>
+              <span>Acesso rápido e protegido para cada membro da equipe</span>
             </div>
-            <button>
-              <span> Assine Agora </span>
-            </button>
-          </div>
-          <div class="plan featured">
-            <h3>Profissional</h3>
+          </li>
+          <li>
+            <i class="ph-fill ph-receipt"></i>
             <div>
-              <p>Todas as funcionalidades do Básico</p>
-              <p>Integração com delivery</p>
-              <p>Relatórios avançados</p>
-              <p>Suporte prioritário</p>
-              <h2 class="price">$299/mês</h2>
+              <strong>Pedidos em poucos cliques</strong>
+              <span>Cadastre, edite e envie pedidos com agilidade absurda</span>
             </div>
-            <button>
-              <span> Assine Agora </span>
-            </button>
-          </div>
-          <div class="plan enterprise">
-            <h3>Enterprise</h3>
+          </li>
+          <li>
+            <i class="ph-fill ph-clock-countdown"></i>
             <div>
-              <p>Personalização completa</p>
-              <p>Suporte dedicado 24/7</p>
-              <p>Soluções para redes de restaurantes</p>
-              <h2 class="price">Sob consulta</h2>
+              <strong>Status ao vivo</strong>
+              <span>Veja o andamento de cada pedido direto no app — preparo, pronto, entregue</span>
             </div>
-            <button><span>Entre em Contato</span></button>
+          </li>
+        </ul>
+
+        <img class="showcase-celulares" src="./assets/celulares.png" alt="WaiterApp em múltiplos celulares" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FUNCIONALIDADES ===================== -->
+  <section id="funcionalidades" class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="ph-fill ph-wrench"></i>
+          <span>Funcionalidades</span>
+        </div>
+        <h2>Tudo que seu restaurante precisa, <span class="text-gradient">em um só lugar</span></h2>
+        <p>Funcionalidades pensadas para quem vive a rotina de restaurante — não para complicar.</p>
+      </div>
+
+      <div class="features-grid" data-stagger>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="ph-bold ph-lightning"></i>
+          </div>
+          <h3>Pedidos em Tempo Real</h3>
+          <p>Cada pedido aparece na cozinha no mesmo instante. Zero atraso, zero confusão na comunicação.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="ph-bold ph-paint-brush-broad"></i>
+          </div>
+          <h3>Interface Intuitiva</h3>
+          <p>Design limpo que qualquer funcionário aprende a usar em 5 minutos — sem manual necessário.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="ph-bold ph-stack"></i>
+          </div>
+          <h3>Integração Multicanal</h3>
+          <p>Delivery, mesa e balcão em uma única tela. Pare de alternar entre apps e perca vendas.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="ph-bold ph-chart-pie-slice"></i>
+          </div>
+          <h3>Relatórios Inteligentes</h3>
+          <p>Saiba quais pratos vendem mais, seus horários de pico e onde está seu gargalo operacional.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="ph-bold ph-users-three"></i>
+          </div>
+          <h3>Gestão de Equipe</h3>
+          <p>Controle acessos, defina permissões e acompanhe a performance de cada garçom.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="ph-bold ph-bell-ringing"></i>
+          </div>
+          <h3>Alertas Inteligentes</h3>
+          <p>Receba notificações automáticas quando um pedido está demorando ou há um problema na cozinha.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MÉTRICAS / NÚMEROS ===================== -->
+  <section class="metrics-section">
+    <div class="container metrics-grid" data-stagger>
+      <div class="metric-card">
+        <div class="metric-value">500+</div>
+        <div class="metric-label">Restaurantes ativos</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">2M+</div>
+        <div class="metric-label">Pedidos processados</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">99.9%</div>
+        <div class="metric-label">Tempo de atividade</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">4.9/5</div>
+        <div class="metric-label">Nota de satisfação</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BENEFÍCIOS ===================== -->
+  <section id="beneficios" class="benefits-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="ph-fill ph-trend-up"></i>
+          <span>Resultados reais</span>
+        </div>
+        <h2>Resultados que fazem seu <span class="text-gradient">negócio crescer</span></h2>
+        <p>Não entregamos apenas tecnologia — entregamos mais lucro, mais tempo e mais tranquilidade.</p>
+      </div>
+
+      <div class="benefits-grid" data-stagger>
+        <div class="benefit-card">
+          <div class="benefit-visual">
+            <div class="benefit-icon">
+              <i class="ph-bold ph-timer"></i>
+            </div>
+          </div>
+          <h3>Economize até 3 horas por dia</h3>
+          <p>Elimine tarefas manuais, reduza idas e vindas desnecessárias e foque no que importa: atender bem.</p>
+        </div>
+
+        <div class="benefit-card benefit-card--accent">
+          <div class="benefit-visual">
+            <div class="benefit-icon">
+              <i class="ph-bold ph-currency-dollar"></i>
+            </div>
+          </div>
+          <h3>Aumente seu faturamento em até 30%</h3>
+          <p>Gire mesas mais rápido, reduza erros que geram desperdício e ofereça uma experiência que fideliza.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-visual">
+            <div class="benefit-icon">
+              <i class="ph-bold ph-smiley"></i>
+            </div>
+          </div>
+          <h3>Encante seus clientes</h3>
+          <p>Atendimento rápido, pedidos corretos e acompanhamento em tempo real = clientes que voltam e indicam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DEPOIMENTOS / PROVA SOCIAL ===================== -->
+  <section id="depoimentos" class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="ph-fill ph-quotes"></i>
+          <span>Quem usa, aprova</span>
+        </div>
+        <h2>O que dizem os donos de restaurante que <span class="text-gradient">já mudaram</span></h2>
+      </div>
+
+      <div class="testimonials-grid" data-stagger>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+          </div>
+          <blockquote>
+            "Antes do WaiterApp, perdíamos em média 15 pedidos por dia por erros de comunicação. Hoje, o índice é praticamente zero. Nosso faturamento cresceu <strong>28% no primeiro mês</strong>."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RC</div>
+            <div class="testimonial-info">
+              <strong>Ricardo Costa</strong>
+              <span>Proprietário — Burger House, São Paulo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+          </div>
+          <blockquote>
+            "Implementamos em menos de um dia, sem treinamento formal. Meus garçons adotaram naturalmente. <strong>A velocidade do atendimento dobrou</strong> e os clientes notaram a diferença."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AM</div>
+            <div class="testimonial-info">
+              <strong>Ana Martins</strong>
+              <span>Gerente — Sabor Express, Rio de Janeiro</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+            <i class="ph-fill ph-star"></i>
+          </div>
+          <blockquote>
+            "Temos 3 filiais e cada uma operava de um jeito. Com o WaiterApp, <strong>padronizamos todo o processo</strong> e consigo acompanhar tudo de qualquer lugar pelo celular."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">PL</div>
+            <div class="testimonial-info">
+              <strong>Paulo Lima</strong>
+              <span>Franqueado — Pizza Point, Belo Horizonte</span>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="images" class="container-images">
-      <div class="images-bg">
-        <img src="./assets/bg-footer.png" alt="" />
+  <!-- ===================== PREÇOS ===================== -->
+  <section id="precos" class="pricing-section">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <div class="section-badge section-badge--dark">
+          <i class="ph-fill ph-tag"></i>
+          <span>Preços simples</span>
+        </div>
+        <h2>Escolha o plano ideal para o <span class="text-gradient-dark">seu restaurante</span></h2>
+        <p>Todos os planos incluem 14 dias grátis. Sem cartão de crédito. Cancele quando quiser.</p>
       </div>
-    </section>
 
-    <!-- Rodapé -->
-    <footer>
-      <div class="container">
-        <nav>
-          <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#funcionalidades">Funcionalidades</a></li>
-            <li><a href="#beneficios">Benefícios</a></li>
-            <li><a href="#precos">Preços</a></li>
-            <li><a href="#contato">Contato</a></li>
+      <div class="pricing-grid" data-stagger>
+        <!-- PLANO BÁSICO -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <div class="pricing-icon">
+              <i class="ph-bold ph-storefront"></i>
+            </div>
+            <h3>Starter</h3>
+            <p class="pricing-desc">Ideal para restaurantes que estão começando a digitalizar.</p>
+          </div>
+          <div class="pricing-amount">
+            <span class="pricing-currency">R$</span>
+            <span class="pricing-value">199</span>
+            <span class="pricing-period">/mês</span>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="ph-fill ph-check-circle"></i> Até 5 usuários</li>
+            <li><i class="ph-fill ph-check-circle"></i> Gestão de pedidos completa</li>
+            <li><i class="ph-fill ph-check-circle"></i> Relatórios básicos</li>
+            <li><i class="ph-fill ph-check-circle"></i> Suporte por e-mail</li>
           </ul>
-        </nav>
-        <div class="social-icons">
-          <a href="#"><i class="ph ph-instagram-logo"></i></a>
-          <a href="#"><i class="ph ph-facebook-logo"></i></a>
-          <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="#" class="btn btn-outline btn-block">Começar Teste Grátis</a>
+        </div>
+
+        <!-- PLANO PROFISSIONAL (destaque) -->
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-popular-tag">Mais Popular</div>
+          <div class="pricing-card-header">
+            <div class="pricing-icon">
+              <i class="ph-bold ph-fork-knife"></i>
+            </div>
+            <h3>Profissional</h3>
+            <p class="pricing-desc">Para restaurantes que querem crescer com eficiência.</p>
+          </div>
+          <div class="pricing-amount">
+            <span class="pricing-currency">R$</span>
+            <span class="pricing-value">299</span>
+            <span class="pricing-period">/mês</span>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="ph-fill ph-check-circle"></i> Tudo do plano Starter</li>
+            <li><i class="ph-fill ph-check-circle"></i> Integração com delivery</li>
+            <li><i class="ph-fill ph-check-circle"></i> Relatórios avançados</li>
+            <li><i class="ph-fill ph-check-circle"></i> Até 15 usuários</li>
+            <li><i class="ph-fill ph-check-circle"></i> Suporte prioritário WhatsApp</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block">Começar Teste Grátis</a>
+        </div>
+
+        <!-- PLANO ENTERPRISE -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <div class="pricing-icon">
+              <i class="ph-bold ph-buildings"></i>
+            </div>
+            <h3>Enterprise</h3>
+            <p class="pricing-desc">Para redes e redes de restaurantes com necessidades custom.</p>
+          </div>
+          <div class="pricing-amount">
+            <span class="pricing-value pricing-value--text">Sob consulta</span>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="ph-fill ph-check-circle"></i> Personalização completa</li>
+            <li><i class="ph-fill ph-check-circle"></i> Usuários ilimitados</li>
+            <li><i class="ph-fill ph-check-circle"></i> Suporte dedicado 24/7</li>
+            <li><i class="ph-fill ph-check-circle"></i> API e integrações custom</li>
+            <li><i class="ph-fill ph-check-circle"></i> Gerente de conta exclusivo</li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-block">Falar com Consultor</a>
         </div>
       </div>
-      <p>&copy; 2023 Gestão de Pedidos. Todos os direitos reservados.</p>
-    </footer>
-    <script src="scripts.js"></script>
-  </body>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL ===================== -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-cta-inner">
+        <h2>Pronto para transformar a operação do seu restaurante?</h2>
+        <p>Junte-se a mais de 500 restaurantes que já eliminaram os erros de pedidos e aumentaram seu faturamento.</p>
+        <div class="final-cta-actions">
+          <a href="#precos" class="btn btn-white btn-lg">
+            <span>Comece Teste Grátis de 14 Dias</span>
+            <i class="ph-bold ph-arrow-right"></i>
+          </a>
+        </div>
+        <p class="final-cta-note"><i class="ph-fill ph-check-circle"></i> Sem cartão de crédito &middot; Setup em 5 minutos &middot; Cancele quando quiser</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="./assets/Logo.png" alt="WaiterApp" width="140" height="36" loading="lazy">
+          <p>Plataforma de gestão de pedidos inteligente para restaurantes que querem crescer com eficiência e qualidade.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Produto</h4>
+          <ul>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#precos">Preços</a></li>
+            <li><a href="#solucao">Como Funciona</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suporte</h4>
+          <ul>
+            <li><a href="#">Central de Ajuda</a></li>
+            <li><a href="#">Documentação</a></li>
+            <li><a href="#">Status do Sistema</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">LGPD</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 WaiterApp. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
 </html>
